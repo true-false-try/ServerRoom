@@ -40,7 +40,7 @@ public:
 	};
 
 	float getDerivative() {
-		if (dt <= 0.0f) return 0.0f; // Prevent division by zero)
+		if (dt <= 0.0f) return 0.0f; // Prevent division by zero!)
 		return Kd * (getError() - lastError) / dt;
 	};
 
@@ -64,7 +64,7 @@ public:
 		return output;
 	}
 private:
-	// Anti-windup: Clamp integral sum to output limits
+	// Anti-windup: Clamp integral sum to output limits!
 	void antiWindup(float& integralSum) {
 		if (Ki > 0.0f) {
 			float maxIntegral = outMax / Ki;
